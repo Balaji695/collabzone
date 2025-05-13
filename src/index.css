@@ -1,0 +1,179 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+/* Theme Classes */
+.theme-quantum {
+  @apply bg-quantum-background text-quantum-foreground;
+}
+
+.theme-prism {
+  @apply bg-prism-background text-prism-foreground;
+}
+
+.theme-eclipse {
+  @apply bg-eclipse-background text-eclipse-foreground;
+}
+
+/* Quantum Theme Utilities */
+.quantum-card {
+  @apply bg-quantum-muted/80 backdrop-blur-md border border-quantum-border/50 rounded-lg overflow-hidden shadow-lg relative;
+}
+
+.quantum-grid-bg {
+  @apply bg-quantum-grid bg-quantum-grid-size;
+}
+
+.quantum-glow {
+  @apply relative;
+}
+
+.quantum-glow::before {
+  content: '';
+  @apply absolute -inset-0.5 bg-gradient-to-r from-quantum-primary to-quantum-secondary rounded-lg blur opacity-75;
+  z-index: -1;
+}
+
+/* Prism Theme Utilities */
+.prism-card {
+  @apply bg-white/80 backdrop-blur-md border border-prism-border/30 rounded-lg overflow-hidden shadow-lg;
+}
+
+.prism-gradient {
+  @apply bg-prism-gradient bg-[size:200%] animate-grid-flow;
+}
+
+.prism-glow {
+  @apply animate-pulse-glow;
+}
+
+/* Eclipse Theme Utilities */
+.eclipse-card {
+  @apply bg-eclipse-muted/90 backdrop-blur-md border border-eclipse-border rounded-lg overflow-hidden shadow-lg;
+}
+
+.eclipse-metal {
+  @apply bg-eclipse-metal;
+}
+
+.eclipse-glow {
+  @apply animate-ember-glow;
+}
+
+/* Navigation Specific Styles */
+.nav-shadow-quantum {
+  box-shadow: 0 0 15px 0 rgba(79, 70, 229, 0.15);
+}
+
+.nav-shadow-prism {
+  box-shadow: 0 0 15px 0 rgba(236, 72, 153, 0.15);
+}
+
+.nav-shadow-eclipse {
+  box-shadow: 0 0 15px 0 rgba(245, 158, 11, 0.15);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .collab-button {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-300;
+  }
+
+  .quantum-button {
+    @apply collab-button bg-quantum-primary text-white hover:bg-quantum-accent;
+  }
+
+  .prism-button {
+    @apply collab-button bg-prism-primary text-white hover:bg-prism-accent;
+  }
+
+  .eclipse-button {
+    @apply collab-button bg-eclipse-primary text-white hover:bg-eclipse-accent;
+  }
+}

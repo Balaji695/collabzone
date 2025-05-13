@@ -1,0 +1,86 @@
+
+export const mockCollabs = [
+  {
+    id: "collab-1",
+    title: "Sci-Fi Short Film Project",
+    description: "Collaborative development of a 5-minute sci-fi short film exploring themes of artificial consciousness in a post-singularity world.",
+    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1625&auto=format&fit=crop",
+    author: {
+      name: "Alex Rivera",
+      avatar: "https://i.pravatar.cc/150?img=1",
+    },
+    contributors: 8,
+    comments: 24,
+    stars: 47,
+    tags: ["Film", "Sci-Fi", "VFX"],
+  },
+  {
+    id: "collab-2",
+    title: "Ambient Electronic Album",
+    description: "Creating an atmospheric electronic album inspired by deep space exploration. Looking for synthesizer artists, sound designers, and vocalists.",
+    image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1470&auto=format&fit=crop",
+    author: {
+      name: "Maya Johnson",
+      avatar: "https://i.pravatar.cc/150?img=5",
+    },
+    contributors: 5,
+    comments: 31,
+    stars: 62,
+    tags: ["Music", "Electronic", "Ambient"],
+  },
+  {
+    id: "collab-3",
+    title: "Cyberpunk Graphic Novel",
+    description: "A collaborative graphic novel set in a neon-soaked cyberpunk future. Seeking writers, illustrators, colorists, and letterers.",
+    image: "https://images.unsplash.com/photo-1557682257-2f9c37a3a5f3?q=80&w=1429&auto=format&fit=crop",
+    author: {
+      name: "Ryu Tanaka",
+      avatar: "https://i.pravatar.cc/150?img=8",
+    },
+    contributors: 12,
+    comments: 57,
+    stars: 94,
+    tags: ["Graphic Novel", "Cyberpunk", "Illustration"],
+  },
+  {
+    id: "collab-4",
+    title: "Sustainable Fashion Collection",
+    description: "Designing a sustainable fashion collection using upcycled materials and eco-friendly production methods. Open for fashion designers, pattern makers, and sustainability experts.",
+    image: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1374&auto=format&fit=crop",
+    author: {
+      name: "Elena Costa",
+      avatar: "https://i.pravatar.cc/150?img=3",
+    },
+    contributors: 7,
+    comments: 42,
+    stars: 76,
+    tags: ["Fashion", "Sustainable", "Design"],
+  },
+  {
+    id: "collab-5",
+    title: "AR Mobile Game Development",
+    description: "Creating an augmented reality mobile game that transforms urban environments into fantasy landscapes. Looking for game developers, 3D artists, and sound designers.",
+    image: "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?q=80&w=1632&auto=format&fit=crop",
+    author: {
+      name: "Marcus Chen",
+      avatar: "https://i.pravatar.cc/150?img=12",
+    },
+    contributors: 14,
+    comments: 68,
+    stars: 112,
+    tags: ["Game Dev", "AR", "Mobile"],
+  },
+  {
+    id: "collab-6",
+    title: "Poetry Anthology on Climate Change",
+    description: "A collaborative anthology of poetry reflecting on climate change and humanity's relationship with nature. Open to poets, editors, and environmental activists.",
+    author: {
+      name: "Olivia Parker",
+      avatar: "https://i.pravatar.cc/150?img=9",
+    },
+    contributors: 23,
+    comments: 91,
+    stars: 143,
+    tags: ["Poetry", "Climate", "Anthology"],
+  }
+];
